@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Card, Icon, Image, Button } from "semantic-ui-react";
 
 import "./App.css";
 
@@ -26,17 +27,31 @@ class App extends Component {
   render() {
     return (
       <>
-        <button class="btn" onClick={this.handleToggle}>
+        <button class="ui button" onClick={this.handleToggle}>
           Toggle User
         </button>
-        {this.state.active && (
-          <>
-            <img src={this.state.user.avatar_url} alt="My Profile" />
-            <h1>{this.state.user.name}</h1>
-            <p>Blog: {this.state.user.blog}</p>
-            <p>Location: {this.state.user.location}</p>
-          </>
-        )}
+        <Card>
+          <Card.Content>
+            {this.state.active && (
+              <div>
+                <img
+                  className="img"
+                  src={this.state.user.avatar_url}
+                  alt="My Profile"
+                />
+                <Card.Description>{this.state.user.name}</Card.Description>
+                <Card.Description>
+                  Followers: {this.state.user.followers}
+                  <hr></hr>
+                </Card.Description>
+                <Card.Description>
+                  <Icon name="location arrow" /> Location:{" "}
+                  {this.state.user.location}
+                </Card.Description>
+              </div>
+            )}
+          </Card.Content>
+        </Card>
       </>
     );
   }
