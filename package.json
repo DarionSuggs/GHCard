@@ -2,7 +2,7 @@
   "name": "github-card",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gitlab.com/DarionSuggs/ghcard",
+  "homepage": "https://darionsuggs.gitlab.io/ghcard ",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
