@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Icon, Image, Button } from "semantic-ui-react";
+import { Card, Icon } from "semantic-ui-react";
 
 import "./App.css";
 
@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <button class="ui button" onClick={this.handleToggle}>
+        <button className="ui button" onClick={this.handleToggle}>
           Toggle User
         </button>
         <Card>
