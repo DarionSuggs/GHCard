@@ -1,12 +1,9 @@
-image: node:6.5.0
-
 pages:
   stage: deploy
   script:
-    - npm install
-    - npm run build
-    - rm -rf public
-    - mv build public
+    - mkdir .public
+    - cp -r * .public
+    - mv .public public
   artifacts:
     paths:
       - public
